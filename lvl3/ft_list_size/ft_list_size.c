@@ -6,7 +6,7 @@
 /*   By: pbiederm <pbiederm@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/15 16:59:09 by pbiederm          #+#    #+#             */
-/*   Updated: 2022/07/15 16:59:23 by pbiederm         ###   ########.fr       */
+/*   Updated: 2022/07/15 17:50:49 by pbiederm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,18 @@
 //     struct s_list *next;
 //     void          *data;
 // }                 t_list;
+#include <ft_list.h>
+
+int	ft_list_size(t_list *begin_list)
+{
+	t_list	*list;
+	int i;
+
+	list = begin_list;
+	while (list)
+	{
+		list = list -> next;
+		i++;
+	}	
+	return (i);
+}
